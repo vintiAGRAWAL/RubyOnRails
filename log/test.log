@@ -1,0 +1,145 @@
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "friends"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "friends" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "First_name" varchar, "Last_name" varchar, "Email" varchar, "Phone_no" varchar, "Description" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230616104430)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2023-06-16 10:45:53.319670"], ["updated_at", "2023-06-16 10:45:53.319670"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "b0811f7bcd17469830fb0385c128539c8f137ce0"], ["created_at", "2023-06-16 10:45:53.323640"], ["updated_at", "2023-06-16 10:45:53.323640"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "friends";
+INSERT INTO "friends" ("id", "First_name", "Last_name", "Email", "Phone_no", "Description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2023-06-16 10:45:53.414338', '2023-06-16 10:45:53.414338');
+INSERT INTO "friends" ("id", "First_name", "Last_name", "Email", "Phone_no", "Description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2023-06-16 10:45:53.414338', '2023-06-16 10:45:53.414338')[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+FriendsControllerTest: test_should_get_edit
+-------------------------------------------
+  [1m[36mFriend Load (0.2ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/friends/980190962/edit" for 127.0.0.1 at 2023-06-16 16:15:53 +0530
+Processing by FriendsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering friends/edit.html.erb within layouts/application
+  Rendered friends/_form.html.erb (Duration: 6.4ms | Allocations: 3387)
+  Rendered friends/edit.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3969)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 286)
+  Rendered layout layouts/application.html.erb (Duration: 246.0ms | Allocations: 91890)
+Completed 200 OK in 259ms (Views: 249.4ms | ActiveRecord: 0.1ms | Allocations: 96084)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+FriendsControllerTest: test_should_show_friend
+----------------------------------------------
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/friends/980190962" for 127.0.0.1 at 2023-06-16 16:15:53 +0530
+Processing by FriendsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mFriend Load (0.0ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/_friend.html.erb (Duration: 0.5ms | Allocations: 265)
+  Rendered friends/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1284)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2711)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 3124)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+FriendsControllerTest: test_should_get_index
+--------------------------------------------
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/friends" for 127.0.0.1 at 2023-06-16 16:15:53 +0530
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  Rendered friends/_friend.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered friends/_friend.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered friends/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 708)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2143)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.1ms | Allocations: 2456)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+FriendsControllerTest: test_should_get_new
+------------------------------------------
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/friends/new" for 127.0.0.1 at 2023-06-16 16:15:53 +0530
+Processing by FriendsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/new.html.erb within layouts/application
+  Rendered friends/_form.html.erb (Duration: 1.4ms | Allocations: 1398)
+  Rendered friends/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1609)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 3044)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 3364)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+FriendsControllerTest: test_should_update_friend
+------------------------------------------------
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/friends/980190962" for 127.0.0.1 at 2023-06-16 16:15:53 +0530
+Processing by FriendsController#update as HTML
+  Parameters: {"friend"=>{"Description"=>"MyString", "Email"=>"MyString", "First_name"=>"MyString", "Last_name"=>"MyString", "Phone_no"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://www.example.com/friends/980190962
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1040)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+FriendsControllerTest: test_should_destroy_friend
+-------------------------------------------------
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mFriend Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "friends"[0m
+Started DELETE "/friends/980190962" for 127.0.0.1 at 2023-06-16 16:15:53 +0530
+Processing by FriendsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFriend Destroy (0.3ms)[0m  [1m[31mDELETE FROM "friends" WHERE "friends"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/friends
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms | Allocations: 660)
+  [1m[36mFriend Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "friends"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+FriendsControllerTest: test_should_create_friend
+------------------------------------------------
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mFriend Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "friends"[0m
+Started POST "/friends" for 127.0.0.1 at 2023-06-16 16:15:53 +0530
+Processing by FriendsController#create as HTML
+  Parameters: {"friend"=>{"Description"=>"MyString", "Email"=>"MyString", "First_name"=>"MyString", "Last_name"=>"MyString", "Phone_no"=>"MyString"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFriend Create (0.3ms)[0m  [1m[32mINSERT INTO "friends" ("First_name", "Last_name", "Email", "Phone_no", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["First_name", "MyString"], ["Last_name", "MyString"], ["Email", "MyString"], ["Phone_no", "MyString"], ["Description", "MyString"], ["created_at", "2023-06-16 10:45:53.946677"], ["updated_at", "2023-06-16 10:45:53.946677"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/friends/980190963
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 815)
+  [1m[36mFriend Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "friends"[0m
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" ORDER BY "friends"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
