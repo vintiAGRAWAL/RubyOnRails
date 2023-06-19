@@ -2,8 +2,8 @@
 
 <h1>List Friends</h1>
 
-<table class="table">
-  <thead>
+<table class="table table-striped table-bordered table-hover" >
+  <thead class="thead-dark">
     <tr>
       <th>First Name</th>
       <th>Last Name</th>
@@ -25,7 +25,7 @@
       <td><%=friend.Phone_no%></td>
       <td><%=friend.Description%></td>
       <td>
-        <%= link_to "Show this friend", friend %>
+        <%= link_to "Show this friend", friend,class:"btn btn-info" %>
       </td>
 
 
@@ -42,5 +42,5 @@
 
 
 
-<%= link_to "New friend", new_friend_path %>
+<%= link_to "New friend", new_friend_path,class:"btn btn-primary" %>
 
